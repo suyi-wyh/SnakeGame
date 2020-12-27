@@ -1,0 +1,2 @@
+D:\bite\GitHub\gluttonous_snake_game\Gluttonous Snake Game\Debug\Gluttonous Snake Game.exe
+D:\bite\GitHub\gluttonous_snake_game\Gluttonous Snake Game\Debug\Gluttonous Snake Game.pdb
