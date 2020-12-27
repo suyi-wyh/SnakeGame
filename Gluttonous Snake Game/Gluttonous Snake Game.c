@@ -99,14 +99,14 @@ void SnakeMove()
 	}
 	if (!chkeating)    //擦除尾巴
 	{
-		MoveCursor(snake.x[snake.snake_len - 1], snake.y[snake.snake_len - 1]);
+		MoveCursor(snake.x[snake.snake_len-1], snake.y[snake.snake_len-1]);
 		printf("  ");
 	}
 	//  蛇不能反向
 	if ((pre_move == 72 && move == 80)||(pre_move==80&&move==72)
 		||(pre_move==75&&move==77)||(pre_move==77&&move==75))
 		move = pre_move;
-	for (int i = 1; i < snake.snake_len; i++)
+	for (int i = snake.snake_len-1; i >0; i--)
 	{
 		snake.x[i] = snake.x[i - 1];
 		snake.y[i] = snake.y[i - 1];

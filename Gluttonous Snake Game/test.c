@@ -8,9 +8,10 @@ void Gaming()
 	{
 		if (ChkSnake())
 		{
-			EatFood();
 			SnakeMove();
-			Sleep(500);
+			EatFood();
+
+			Sleep(200);
 		}
 		else
 		{
