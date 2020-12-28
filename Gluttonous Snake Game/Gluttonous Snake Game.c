@@ -38,7 +38,7 @@ void ShowMap()
 
 void InitSnake()
 {
-	snake.snake_len = 3;
+	snake.snake_len = 30;
 	snake.snake_speed = SPEED;
 	snake.x[0] = MAXWEIGHT / 2 + 1;
 	snake.y[0] = MAXHIGH / 2;
@@ -60,9 +60,9 @@ void CreatFood()
 	srand((unsigned int)time(NULL));
 	do
 	{
-		food.food_x = rand() % MAXWEIGHT + 2;
-		food.food_y = rand() % MAXHIGH + 1;
-		for (int i = 0; i < SNAKESIZE; i++)
+		food.food_x = rand() % (MAXWEIGHT - 2) + 2;
+		food.food_y = rand() % (MAXHIGH - 1) + 1;
+		for (int i = 0; i < snake.snake_len; i++)
 		{
 			if (food.food_x == snake.x[i] && food.food_y == snake.y[i])
 			{
@@ -70,7 +70,7 @@ void CreatFood()
 				break;
 			}
 		}
-	} while (!coincide&&food.food_x % 2 != 0);
+	} while (food.food_x % 2 != 0||coincide);
 		
 	MoveCursor(food.food_x, food.food_y);
 	printf(FOOD);
