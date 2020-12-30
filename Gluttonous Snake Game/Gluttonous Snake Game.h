@@ -9,7 +9,7 @@
 
 #define SNAKESIZE  100
 #define MAXWEIGHT 118      //需要是偶数  不然会有不对齐的问题 
-#define MAXHIGH 29
+#define MAXHIGH 28
 
 #define SNAKE "■"
 #define FOOD "★"
@@ -33,6 +33,7 @@ struct
 
 static int move = 77;
 static int chkeating = 0;  //判断当前移动是否碰到食物
+static int score;
 
 void MoveCursor(int x,int y);   //移动光标
 void ShowMap();  // 初始化地图

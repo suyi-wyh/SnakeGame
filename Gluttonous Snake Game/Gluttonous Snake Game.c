@@ -32,8 +32,10 @@ void ShowMap()
 
 	InitSnake();
 	CreatFood();
-	MoveCursor(0,MAXHIGH+3);
-
+	MoveCursor(0,MAXHIGH+1);
+	printf("当前得分：");
+	MoveCursor(20, MAXHIGH + 1);
+	printf("%d", score);
 }
 
 void InitSnake()
@@ -82,6 +84,9 @@ void EatFood()
 	{
 		snake.snake_len++;
 		chkeating = 1;    //  当前吃到食物 
+		score += 10;
+		MoveCursor(20, MAXHIGH + 1);
+		printf("%d",score);
 		CreatFood();
 	}
 }
