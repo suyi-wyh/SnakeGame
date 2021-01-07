@@ -40,7 +40,7 @@ void ShowMap()
 
 void InitSnake()
 {
-	snake.snake_len = 30;
+	snake.snake_len = 3;
 	snake.snake_speed = SPEED;
 	snake.x[0] = MAXWEIGHT / 2 + 1;
 	snake.y[0] = MAXHIGH / 2;
